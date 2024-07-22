@@ -14,7 +14,7 @@ router.post("/create-user", async (req, res, next) => {
   try {
     const { name, email, password, avatar } = req.body;
     const userEmail = await User.findOne({ email });
-
+    console.log(11111111111);
     if (userEmail) {
       return next(new ErrorHandler("User already exists", 400));
     }
@@ -35,7 +35,7 @@ router.post("/create-user", async (req, res, next) => {
 
     const activationToken = createActivationToken(user);
 
-    const activationUrl = `https://eshop-tutorial-pyri.vercel.app/activation/${activationToken}`;
+    const activationUrl = `http://localhost:3000/activation/${activationToken}`;
 
     try {
       await sendMail({
