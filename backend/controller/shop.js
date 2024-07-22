@@ -40,7 +40,7 @@ router.post(
 
       const activationToken = createActivationToken(seller);
 
-      const activationUrl = `https://ecommerce-website-abduselam-dftdsp7vx-abduselams-projects.vercel.app//seller/activation/${activationToken}`;
+      const activationUrl = `https://ecommerce-website-abduselam.vercel.app/seller/activation/${activationToken}`;
 
       try {
         await sendMail({

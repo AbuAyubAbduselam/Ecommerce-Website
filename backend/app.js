@@ -7,9 +7,7 @@ const cors = require("cors");
 
 app.use(
   cors({
-    origin: [
-      "https://ecommerce-website-abduselam-dftdsp7vx-abduselams-projects.vercel.app/",
-    ],
+    origin: ["http://https://ecommerce-website-abduselam.vercel.app/"],
     credentials: true,
   })
 );
